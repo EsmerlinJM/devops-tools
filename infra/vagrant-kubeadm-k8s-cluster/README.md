@@ -1,9 +1,9 @@
 
-# Vagrantfile and Scripts to Automate Kubernetes Setup using Kubeadm [Practice Environment for CKA/CKAD and CKS Exams]
+# Vagrantfile and Scripts to Automate Kubernetes Setup using Kubeadm [Practice Environment]
 
 ## Documentation
 
-Current k8s version for CKA, CKAD and CKS exam: 1.26
+Current k8s version 1.27.01
 
 ## Prerequisites
 
