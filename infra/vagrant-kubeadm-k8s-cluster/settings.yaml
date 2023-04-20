@@ -1,0 +1,31 @@
+---
+# cluster_name is used to group the nodes in a folder within VirtualBox:
+cluster_name: Kubernetes Cluster
+network:
+  # Worker IPs are simply incremented from the control IP.
+  control_ip: 192.168.1.49
+  dns_servers:
+    - 8.8.8.8
+    - 1.1.1.1
+  pod_cidr: 172.16.1.0/16
+  service_cidr: 172.17.1.0/18
+nodes:
+  control:
+    count: 2
+    cpu: 2
+    memory: 2048
+  workers:
+    count: 3
+    cpu: 2
+    memory: 2048
+# Mount additional shared folders from the host into each virtual machine.
+# Note that the project directory is automatically mounted at /vagrant.
+# shared_folders:
+#   - host_path: ../images
+#     vm_path: /vagrant/images
+software:
+  box: bento/ubuntu-22.04
+  cilium: 1.13.2
+  dashboard: 2.7.0
+  kubernetes: 1.27.1-00
+  os: xUbuntu_22.04
