@@ -3,7 +3,7 @@
 cluster_name: Kubernetes Cluster
 network:
   # Worker IPs are simply incremented from the control IP.
-  control_ip: 192.168.1.49
+  control_ip: 192.168.56.10
   dns_servers:
     - 8.8.8.8
     - 1.1.1.1
@@ -11,11 +11,11 @@ network:
   service_cidr: 172.17.1.0/18
 nodes:
   control:
-    count: 2
+    count: 1
     cpu: 2
-    memory: 2048
+    memory: 4096
   workers:
-    count: 3
+    count: 2
     cpu: 2
     memory: 2048
 # Mount additional shared folders from the host into each virtual machine.
@@ -27,5 +27,5 @@ software:
   box: bento/ubuntu-22.04
   cilium: 1.13.2
   dashboard: 2.7.0
-  kubernetes: 1.27.1-00
+  kubernetes: 1.28.1-00
   os: xUbuntu_22.04
